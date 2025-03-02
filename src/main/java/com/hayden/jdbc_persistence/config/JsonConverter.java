@@ -13,7 +13,7 @@ public class JsonConverter implements Converter<PGJson, PGobject> {
     public PGobject convert(PGJson source) {
         var p = new PGobject();
         p.setType("json");
-        p.setValue(source.value);
+        p.setValue(source.value());
         return p;
     }
 }
